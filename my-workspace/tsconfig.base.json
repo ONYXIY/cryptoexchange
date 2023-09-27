@@ -1,0 +1,47 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@my-workspace/auth": ["auth--directory=core/src/index.ts"],
+      "@my-workspace/auth--addTailwind=true": [
+        "auth--directory=core--publishable=true/src/index.ts"
+      ],
+      "@my-workspace/homepage": ["libs/exchange/src/index.ts"],
+      "@my-workspace/libs/core/auth": ["core/src/index.ts"],
+      "@my-workspace/trading": ["exchange/src/index.ts"],
+      "@myorg/homepage": ["exchange/src/index.ts"],
+      "auth": ["libs/core/src/index.ts"],
+      "core": ["libs/core/src/index.ts"],
+      "exchange": ["libs/exchange/src/index.ts"],
+      "exchange//staking": ["libs/exchange/staking/src/index.ts"],
+      "exchange//trading": ["libs/exchange/trading/src/index.ts"],
+      "exchange/home-page": ["libs/exchange/home-page/src/index.ts"],
+      "exchange/home-page/home-page": [
+        "libs/exchange/home-page/home-page/src/index.ts"
+      ],
+      "exchange/homepage": ["libs/exchange/homepage/src/index.ts"],
+      "exchange/stacking": ["libs/exchange/stacking/src/index.ts"],
+      "exchange/trading": ["libs/exchange/trading/src/index.ts"],
+      "exchange/trading/trading": [
+        "libs/exchange/trading/trading/src/index.ts"
+      ],
+      "home-page": ["home-page/src/index.ts"],
+      "staking": ["libs/staking/src/index.ts"],
+      "staking/staking": ["libs/staking/staking/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
