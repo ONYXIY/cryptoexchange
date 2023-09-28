@@ -38,6 +38,7 @@
       "exchange/trading/trading": [
         "libs/exchange/trading/trading/src/index.ts"
       ],
+      "header": ["exchange/src/index.ts"],
       "home-page": ["home-page/src/index.ts"],
       "staking": ["libs/staking/src/index.ts"],
       "staking/staking": ["libs/staking/staking/src/index.ts"]

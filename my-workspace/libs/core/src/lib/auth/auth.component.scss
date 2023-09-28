@@ -1,0 +1,42 @@
+.authorization-header {
+    top: -90px;
+    width: 500px;
+    position: relative;
+    background: linear-gradient(-45deg, #015, #001879);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 10px 0;
+    height: 22px;
+    opacity: 1;
+    transform: translateX(0);
+    display: grid;
+    
+}
+
+.form-container {
+    position: relative;
+    width: 500px;
+    padding-top: 40px;
+    background: #015;
+    border: 1px solid rgba(0,117,255,.2);
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1),
+            0 1px 1px 1px rgba(0, 0, 0, 0.08),
+            0 1px 3px 1px rgba(0, 0, 0, 0.06);
+            &:hover {
+                box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+                  0 2px 2px 2px rgba(0, 0, 0, 0.1),
+                  0 2px 4px 2px rgba(0, 0, 0, 0.08);
+              }
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    opacity: 1;
+    transform: translateX(0);
+    min-height: 240px;
+    color: white;
+    align-items: center;
+}
