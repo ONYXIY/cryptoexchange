@@ -1,8 +1,7 @@
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { modalAuthService } from '@my-workspace/homepage';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'lib-auth',
