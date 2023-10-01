@@ -1,16 +1,40 @@
-body {
-    margin-top: 0;
-  }
-  
-  .header {
-      @apply mt-0 bg-white shadow-md w-full;
-  
-      .nav-link {
-          @apply text-gray-800 hover:text-gray-600;
+.header {
+    background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 15px;
+        max-width: 1200px;
         
-          &.sign-up {
-              @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600;
-          }
-      }
-  }
-  
+        .logo {
+            max-height: 100px;
+            max-width: 100px;
+        }
+        
+        .nav,
+        .auth {
+            display: flex;
+            gap: 20px;
+            
+            .nav-link {
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: all 0.3s ease; // Добавлено для плавности анимации
+                
+                &:hover {
+                    color: #007bff;
+                    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff; // Эффект свечения при наведении
+                }
+            }
+            
+            .sign-up {
+                font-weight: bold;
+            }
+        }
+    }
+}

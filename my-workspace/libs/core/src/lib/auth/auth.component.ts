@@ -1,6 +1,8 @@
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { modalAuthService } from '@my-workspace/homepage';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'lib-auth',
@@ -10,20 +12,23 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./auth.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuthComponent{
+export class AuthComponent {
   private readonly fb = inject(FormBuilder)
-@Input() register!: boolean;
-@Output() toggle = new EventEmitter()
+  private readonly registerModal = inject(modalAuthService)
+
+  public register$ = this.registerModal.registerOn$;
 
   public readonly form = this.fb.group({
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
-  })
-
-  public registerToggle(){
-    this.toggle.emit()
+  });
+  closeModal() {
+    this.registerModal.toggle();
   }
 
 }
+
+
+

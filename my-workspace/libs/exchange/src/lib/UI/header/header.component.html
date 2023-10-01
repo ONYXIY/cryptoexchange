@@ -1,26 +1,16 @@
-<header class="header mt-0 w-full">
-    <div class="container mx-auto flex items-center justify-between p-4 w-full">
-        <img class="logo text-2xl font-bold" 
+<header class="header">
+    <div class="container">
+        <img class="logo" 
              src="https://images.freeimg.net/rsynced_images/logo-3266214_1280.png" 
-             style="max-height: 100px; max-width: 100px;">
-        <div>
+             alt="logo">
+        <nav class="nav">
             <a href="#" class="nav-link">Home</a>
             <a href="#" class="nav-link">Wallet</a>
             <a href="#" class="nav-link">Trading</a>
-            <a href="#" class="nav-link">Log In</a>
-            <a href="#" class="nav-link sign-up">Sign Up</a>
+        </nav>
+        <div class="auth">
+            <button class="nav-link">Log In</button>
+            <button class="nav-link sign-up" (click)="onSignUpClick()">Sign Up</button>
         </div>
     </div>
 </header>
-
-
-
-<!-- <nav class="nav flex-grow">
-            <ul class="flex items-center justify-between w-full">
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">Wallet</a></li>
-                <li><a href="#" class="nav-link">Trading</a></li>
-                <li><a href="#" class="nav-link">Log In</a></li>
-                <li><a href="#" class="nav-link sign-up">Sign Up</a></li>
-            </ul>
-        </nav> -->
