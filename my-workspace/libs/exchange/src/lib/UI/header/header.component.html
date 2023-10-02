@@ -3,10 +3,9 @@
         <img class="logo" 
              src="https://images.freeimg.net/rsynced_images/logo-3266214_1280.png" 
              alt="logo">
-        <nav class="nav">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Wallet</a>
-            <a href="#" class="nav-link">Trading</a>
+        <nav class="nav" *ngFor="let link of menu">
+            <a href="{{link.routerLink}}" class="{{link.class}}">{{link.name}}</a>
+            
         </nav>
         <div class="auth">
             <button class="nav-link">Log In</button>

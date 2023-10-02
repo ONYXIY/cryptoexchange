@@ -11,6 +11,26 @@ import { modalAuthService } from '../../service/modalAuthService';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
+
+  public readonly menu = [{
+    name: 'Home',
+    routerLink: '',
+    class: 'nav-link'
+  },
+  {
+    name: 'Wallet',
+    routerLink: 'wallet',
+    class: 'nav-link'
+  },{
+    name: 'Trading',
+    routerLink: 'trading',
+    class: 'nav-link'
+  },{
+    name: 'About us',
+    routerLink: 'about',
+    class: 'nav-link'
+  }]
+
   constructor(private toggleAuth: modalAuthService) {}
 
   onSignUpClick() {
