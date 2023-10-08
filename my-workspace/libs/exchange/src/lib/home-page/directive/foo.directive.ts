@@ -1,11 +1,19 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[libFoo]',
   standalone: true,
 })
 export class FooDirective {
-  constructor() {
-    console.log('213')
-  }
+ @Input() color = '#ccc'
+ @HostBinding('style.backgroundColor') bgc = '';
+
+ @HostListener('mouseenter')
+ enter(){
+  this.bgc = this.color
+}
+ @HostListener('mouseleave')
+  leave(){
+    this.bgc = '';
+ }
 }

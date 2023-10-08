@@ -11,7 +11,8 @@ import { FooDirective } from './directive/foo.directive';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  hostDirectives: [FooDirective]
+  hostDirectives: [FooDirective] //Деректива всегда будет отрабатывать быстрее чем компонент,
+  //  но компонент определяет очередность инициализации деректив
 })
 export class HomePageComponent {
 
